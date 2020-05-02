@@ -1,0 +1,8 @@
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\obj\Debug\TimeWaste.csprojAssemblyReference.cache
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\obj\Debug\TimeWaste.Properties.Resources.resources
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\obj\Debug\TimeWaste.csproj.GenerateResource.cache
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\bin\Debug\TimeWaste.exe.config
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\bin\Debug\TimeWaste.exe
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\bin\Debug\TimeWaste.pdb
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\obj\Debug\TimeWaste.exe
+C:\Users\udovi\source\repos\TimeWaste\TimeWaste\obj\Debug\TimeWaste.pdb
