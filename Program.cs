@@ -17,7 +17,7 @@ namespace TimeWaste
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameForm(new Point(10,10), Direction.Up, 20, 20));
+            Application.Run(new GameForm(new Point(5, 5), Direction.Right, 10, 10));
         }
     }
 }
