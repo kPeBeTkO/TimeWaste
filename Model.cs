@@ -20,13 +20,14 @@ namespace TimeWaste
         private Point head;
 
         public Point Head { get => head; private set => head = value; }
-        public Direction Direction { get; private set; }
+        private Direction direction;
+        private Direction newDirection;
         public List<Point> Tail { get; private set; }
         public Snake(Point head, Direction direction)
         {
             Head = head;
-            Direction = direction;
-            switch (Direction)
+            this.direction = direction;
+            switch (direction)
             {
                 case Direction.Up:
                     Tail = new List<Point> { Head, new Point(Head.X, Head.Y + 1), new Point(Head.X, Head.Y + 2) };
@@ -46,7 +47,7 @@ namespace TimeWaste
         public Point GetNewHead()
         {
             var newHead = head;
-            switch (Direction)
+            switch (newDirection)
             {
                 case Direction.Up:
                     newHead.Y -= 1;
@@ -65,8 +66,9 @@ namespace TimeWaste
         }
         public bool Move()
         {
+            direction = newDirection;
             Head = GetNewHead();
-            if (Tail.Contains(Head))
+            if (Tail.Take(Tail.Count - 1).Contains(Head))
                 return false;
             var newTail = new List<Point> { Head };
             for (var i = 0; i < Tail.Count - 1; i++)
@@ -82,25 +84,25 @@ namespace TimeWaste
             Tail.Add(oldEnd);
         }
 
-        public void ChangeDirection(Direction newDirection)
+        public void ChangeDirection(Direction newDir)
         {
-            switch(Direction)
+            switch(direction)
             {
                 case Direction.Up:
-                    if (newDirection != Direction.Down)
-                        Direction = newDirection;
+                    if (newDir != Direction.Down)
+                        newDirection = newDir;
                     break;
                 case Direction.Down:
-                    if (newDirection != Direction.Up)
-                        Direction = newDirection;
+                    if (newDir != Direction.Up)
+                        newDirection = newDir;
                     break;
                 case Direction.Left:
-                    if (newDirection != Direction.Right)
-                        Direction = newDirection;
+                    if (newDir != Direction.Right)
+                        newDirection = newDir;
                     break;
                 case Direction.Right:
-                    if (newDirection != Direction.Left)
-                        Direction = newDirection;
+                    if (newDir != Direction.Left)
+                        newDirection = newDir;
                     break;
             }
         }
